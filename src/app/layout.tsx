@@ -28,6 +28,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.about.intro.slice(0, 160),
+  icons: {
+    icon: "/images/logo-waterland.png",
+    apple: "/images/logo-waterland.png",
+  },
 };
 
 export default function RootLayout({

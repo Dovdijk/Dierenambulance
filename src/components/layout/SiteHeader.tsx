@@ -36,14 +36,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3.5 sm:px-6">
-        <Link href="/" className="flex min-w-0 max-w-[min(100%,16rem)] items-center gap-2 sm:max-w-none sm:gap-3">
-          <span className="relative block h-10 w-10 shrink-0 sm:h-11 sm:w-11">
+        <Link href="/" className="flex min-w-0 max-w-[min(100%,18rem)] items-center gap-2 sm:max-w-none sm:gap-3">
+          <span className="relative block h-12 w-12 shrink-0 sm:h-[70px] sm:w-[70px]">
             <Image
               src={siteConfig.logo}
               alt=""
               fill
               className="object-contain"
-              sizes="44px"
+              sizes="70px"
+              priority
             />
           </span>
           <span className="truncate font-display text-base font-bold tracking-tight text-slate-900 sm:text-lg">
@@ -67,6 +68,13 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
+
+          <Link
+            href="/doneren"
+            className="hidden shrink-0 rounded-full bg-rescue-500 px-4 py-2.5 text-sm font-bold text-white shadow-soft transition hover:bg-rescue-600 md:inline-flex"
+          >
+            Doneer
+          </Link>
 
           <a
             href={tel}
@@ -110,6 +118,13 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href="/doneren"
+              className="mt-2 rounded-xl bg-rescue-500 px-4 py-3 text-center font-bold text-white"
+              onClick={() => setOpen(false)}
+            >
+              Doneer
+            </Link>
             <a href={tel} className="mt-2 rounded-xl bg-slate-900 px-4 py-3 text-center font-bold text-white">
               Bel {siteConfig.emergencyPhone}
             </a>

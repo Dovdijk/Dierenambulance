@@ -23,14 +23,14 @@ export function HomeHero() {
           <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
             <Link
               href="/"
-              className="relative block h-16 w-16 shrink-0 rounded-xl bg-white/95 p-2 shadow-lg ring-1 ring-white/20 sm:h-20 sm:w-20"
+              className="relative block h-[70px] w-[70px] shrink-0 rounded-xl bg-white/95 p-1.5 shadow-lg ring-1 ring-white/20 sm:h-20 sm:w-20"
               aria-label={`${siteConfig.name} — home`}
             >
               <Image
                 src={siteConfig.logo}
                 alt=""
                 fill
-                className="object-contain p-1"
+                className="object-contain p-0.5"
                 sizes="80px"
                 priority
               />

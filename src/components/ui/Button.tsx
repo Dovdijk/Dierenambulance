@@ -23,6 +23,7 @@ type Props = {
   className?: string;
   onClick?: () => void;
   type?: "button" | "submit";
+  disabled?: boolean;
 };
 
 export function Button({
@@ -32,9 +33,10 @@ export function Button({
   className = "",
   onClick,
   type = "button",
+  disabled = false,
 }: Props) {
   const base =
-    "inline-flex items-center justify-center rounded-xl px-6 py-3 text-base font-semibold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 min-h-[48px]";
+    "inline-flex items-center justify-center rounded-xl px-6 py-3 text-base font-semibold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 min-h-[48px] disabled:pointer-events-none disabled:opacity-50";
 
   if (href) {
     return (
@@ -48,6 +50,7 @@ export function Button({
     <button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       className={`${base} ${variants[variant]} ${className}`}
     >
       {children}

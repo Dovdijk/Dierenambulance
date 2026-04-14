@@ -5,7 +5,7 @@ export const siteConfig = {
   generalPhone: "0299-436084",
   emergencyLabel: "Dier in nood? Bel direct",
   email: "contact@dierenambulancewaterland.nl",
-  logo: "https://dierenambulancewaterland.nl/wp-content/uploads/2026/03/Logo_DAW.png",
+  logo: "/images/logo-waterland.png",
   heroImage:
     "https://dierenambulancewaterland.nl/wp-content/uploads/2025/10/Ria-foto-ooievaar-ziekenhuis-scaled.jpg",
   address: {
