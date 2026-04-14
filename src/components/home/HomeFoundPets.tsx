@@ -24,7 +24,7 @@ export function HomeFoundPets() {
                   Gevonden in <span className="font-semibold">{pet.foundAt}</span> op{" "}
                   <span className="font-semibold">{pet.foundOn}</span>.
                 </p>
-                <p className="rounded-xl bg-emerald-100 px-3 py-2 text-sm text-emerald-900">{pet.contactText}</p>
+                <p className="rounded-xl bg-brand-100 px-3 py-2 text-sm text-brand-900">{pet.contactText}</p>
               </div>
             </li>
           ))}

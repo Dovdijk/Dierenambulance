@@ -33,14 +33,14 @@ type StatCardProps = {
 function StatCard({ label, value, enabled, icon }: StatCardProps) {
   const display = useCountUp(value, 1400, enabled);
   return (
-    <div className="rounded-2xl border border-emerald-100 bg-white p-6 text-center shadow-card">
+    <div className="rounded-2xl border border-brand-100 bg-white p-6 text-center shadow-card">
       <div
-        className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-800"
+        className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-800"
         aria-hidden
       >
         {icon}
       </div>
-      <p className="mt-4 font-display text-4xl font-bold tabular-nums text-emerald-800 sm:text-5xl">
+      <p className="mt-4 font-display text-4xl font-bold tabular-nums text-brand-800 sm:text-5xl">
         {display.toLocaleString("nl-NL")}
       </p>
       <p className="mt-2 text-sm font-medium text-slate-600">{label}</p>
@@ -97,7 +97,7 @@ export function HomeYearStats() {
   );
 
   return (
-    <section ref={ref} className="bg-gradient-to-b from-emerald-50/80 to-white py-16 sm:py-20">
+    <section ref={ref} className="bg-gradient-to-b from-brand-50 to-white py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Outfit } from "next/font/google";
+import { DM_Sans, Outfit, Pacifico } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/data/site";
 
@@ -12,6 +12,13 @@ const outfit = Outfit({
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-geist-sans",
+  display: "swap",
+});
+
+const pacifico = Pacifico({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-accent",
   display: "swap",
 });
 
@@ -29,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className={`${outfit.variable} ${dmSans.variable}`}>
+    <html lang="nl" className={`${outfit.variable} ${dmSans.variable} ${pacifico.variable}`}>
       <body className="min-h-screen font-sans antialiased">{children}</body>
     </html>
   );

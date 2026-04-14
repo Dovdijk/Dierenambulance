@@ -55,7 +55,7 @@ export function HomeHero() {
           </div>
 
           <div className="mt-auto max-w-3xl pt-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-brand-100">
+            <p className="cta-script text-xl text-accent-500">
               Professionele vrijwilligers · Waterland
             </p>
             <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-white text-balance sm:text-5xl lg:text-6xl">

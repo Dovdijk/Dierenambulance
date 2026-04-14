@@ -5,15 +5,15 @@ type Variant = "primary" | "secondary" | "outline" | "white" | "donate";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-emerald-500 text-white shadow-soft hover:bg-emerald-600 focus-visible:ring-emerald-400",
+    "bg-brand-600 text-white shadow-soft hover:bg-brand-700 focus-visible:ring-brand-500",
   secondary:
-    "bg-sky-500 text-white shadow-soft hover:bg-sky-600 focus-visible:ring-sky-400",
+    "bg-accent-500 text-ink-500 shadow-soft hover:bg-accent-600 focus-visible:ring-accent-500",
   outline:
     "border border-brand-300 text-brand-900 bg-white hover:bg-brand-50 focus-visible:ring-brand-500",
   white:
     "bg-white text-brand-800 shadow-soft hover:bg-slate-50 focus-visible:ring-white",
   donate:
-    "bg-orange-500 text-white shadow-lg shadow-orange-800/20 hover:bg-orange-600 focus-visible:ring-orange-400",
+    "bg-rescue-500 text-white shadow-lg shadow-rescue-700/25 hover:bg-rescue-600 focus-visible:ring-rescue-500",
 };
 
 type Props = {

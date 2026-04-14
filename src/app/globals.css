@@ -23,6 +23,14 @@ body {
 }
 
 @layer utilities {
+  .cta-script {
+    font-family: var(--font-accent), cursive;
+    transform: rotate(-3deg);
+    display: inline-block;
+  }
+}
+
+@layer utilities {
   .text-balance {
     text-wrap: balance;
   }
