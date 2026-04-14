@@ -71,7 +71,7 @@ export function SiteHeader() {
 
           <Link
             href="/doneren"
-            className="hidden shrink-0 rounded-full bg-rescue-500 px-4 py-2.5 text-sm font-bold text-white shadow-soft transition hover:bg-rescue-600 md:inline-flex"
+            className="donate-attention hidden shrink-0 rounded-full bg-rescue-500 px-4 py-2.5 text-sm font-bold text-white shadow-soft transition-colors hover:bg-rescue-600 md:inline-flex"
           >
             Doneer
           </Link>
@@ -120,7 +120,7 @@ export function SiteHeader() {
             ))}
             <Link
               href="/doneren"
-              className="mt-2 rounded-xl bg-rescue-500 px-4 py-3 text-center font-bold text-white"
+              className="donate-attention mt-2 rounded-xl bg-rescue-500 px-4 py-3 text-center font-bold text-white transition-colors hover:bg-rescue-600"
               onClick={() => setOpen(false)}
             >
               Doneer

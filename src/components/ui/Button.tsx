@@ -13,7 +13,7 @@ const variants: Record<Variant, string> = {
   white:
     "bg-white text-brand-800 shadow-soft hover:bg-slate-50 focus-visible:ring-white",
   donate:
-    "bg-rescue-500 text-white shadow-lg shadow-rescue-700/25 hover:bg-rescue-600 focus-visible:ring-rescue-500",
+    "donate-attention bg-rescue-500 text-white shadow-lg shadow-rescue-700/25 hover:bg-rescue-600 focus-visible:ring-rescue-500",
 };
 
 type Props = {
