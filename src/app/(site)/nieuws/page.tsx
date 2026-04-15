@@ -17,8 +17,13 @@ export default function NieuwsPage() {
           Updates, praktijkverhalen en tips rondom dieren in nood.
         </p>
         <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {siteConfig.news.map((item) => (
-            <article key={item.title} className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-card">
+          {siteConfig.news.map((item, idx) => (
+            <article
+              key={item.title}
+              className={`overflow-hidden rounded-3xl border shadow-card ${
+                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50"
+              }`}
+            >
               <div className="relative aspect-[16/10]">
                 <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width:1024px) 100vw, 33vw" />
               </div>

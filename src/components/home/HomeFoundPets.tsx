@@ -12,8 +12,13 @@ export function HomeFoundPets() {
           </h2>
         </div>
         <ul className="mt-10 grid gap-6 md:grid-cols-3">
-          {siteConfig.foundPets.map((pet) => (
-            <li key={pet.name} className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-card">
+          {siteConfig.foundPets.map((pet, idx) => (
+            <li
+              key={pet.name}
+              className={`overflow-hidden rounded-3xl border shadow-card ${
+                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50"
+              }`}
+            >
               <div className="relative aspect-[16/11]">
                 <Image src={pet.image} alt={pet.name} fill className="object-cover" sizes="(max-width:768px) 100vw, 33vw" />
               </div>

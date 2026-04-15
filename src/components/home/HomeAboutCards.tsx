@@ -15,10 +15,12 @@ export function HomeAboutCards() {
         </div>
 
         <ul className="mt-12 grid gap-8 sm:grid-cols-2">
-          {siteConfig.homeAboutCards.map((card) => (
+          {siteConfig.homeAboutCards.map((card, idx) => (
             <li
               key={card.title}
-              className="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-slate-50/60 shadow-soft"
+              className={`flex flex-col overflow-hidden rounded-2xl border shadow-soft ${
+                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50/70"
+              }`}
             >
               <div className="relative aspect-[16/10]">
                 <Image

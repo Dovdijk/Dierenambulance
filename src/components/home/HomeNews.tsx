@@ -18,8 +18,13 @@ export function HomeNews() {
           </Link>
         </div>
         <ul className="mt-10 grid gap-6 md:grid-cols-3">
-          {siteConfig.news.slice(0, 3).map((item) => (
-            <li key={item.title} className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-soft">
+          {siteConfig.news.slice(0, 3).map((item, idx) => (
+            <li
+              key={item.title}
+              className={`overflow-hidden rounded-2xl border shadow-soft ${
+                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50"
+              }`}
+            >
               <div className="relative aspect-[16/10]">
                 <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width:768px) 100vw, 33vw" />
               </div>

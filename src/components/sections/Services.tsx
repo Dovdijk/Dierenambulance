@@ -136,8 +136,13 @@ export function Services() {
         </div>
 
         <div className="mt-12 space-y-10">
-          {serviceGroups.map((group) => (
-            <section key={group.id} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card">
+          {serviceGroups.map((group, idx) => (
+            <section
+              key={group.id}
+              className={`overflow-hidden rounded-3xl border shadow-card ${
+                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50/70"
+              }`}
+            >
               <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
                 <div className="relative min-h-[260px]">
                   <Image src={group.image} alt={group.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 40vw" />
@@ -159,7 +164,7 @@ export function Services() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold uppercase tracking-wide text-brand-700">Tarieven</p>
-                      <ul className="mt-3 space-y-2 rounded-2xl bg-brand-50 p-4 text-sm">
+                      <ul className={`mt-3 space-y-2 rounded-2xl p-4 text-sm ${idx % 3 === 1 ? "bg-brand-50" : "bg-white/80"}`}>
                         {group.pricing.map((price) => (
                           <li key={price.label} className="flex items-center justify-between gap-3 border-b border-brand-100 pb-2 last:border-0 last:pb-0">
                             <span className="text-slate-700">{price.label}</span>
@@ -178,8 +183,13 @@ export function Services() {
         <section className="mt-12">
           <h3 className="font-display text-2xl font-bold text-slate-900 sm:text-3xl">Overige diensten</h3>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            {extraServices.map((item) => (
-              <article key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            {extraServices.map((item, idx) => (
+              <article
+                key={item.title}
+                className={`rounded-2xl border p-6 shadow-soft ${
+                  idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50"
+                }`}
+              >
                 <p className="text-2xl" aria-hidden>
                   {item.icon}
                 </p>

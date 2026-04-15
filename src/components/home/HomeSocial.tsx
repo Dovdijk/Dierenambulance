@@ -14,8 +14,13 @@ export function HomeSocial() {
           </p>
         </div>
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-          {siteConfig.instaPosts.map((post) => (
-            <li key={post.label} className="rounded-xl border border-slate-200 bg-white p-4">
+          {siteConfig.instaPosts.map((post, idx) => (
+            <li
+              key={post.label}
+              className={`rounded-xl border p-4 ${
+                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50"
+              }`}
+            >
               <Link href={post.href} className="font-medium text-slate-800 hover:text-brand-700 hover:underline">
                 {post.label}
               </Link>
