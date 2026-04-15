@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AnimalListings } from "@/components/animals/AnimalListings";
 
 export const metadata: Metadata = {
   title: "Vermist",
@@ -6,27 +7,62 @@ export const metadata: Metadata = {
 };
 
 const missingAnimals = [
-  "Zwarte kat met wit borstje - Overwhere, Purmerend",
-  "Kleine hond (teckel) - Edam",
-  "Roodborstje met pootring - Waterland",
+  {
+    name: "Luna",
+    type: "Kat",
+    color: "Zwart met wit borstje",
+    size: "Klein",
+    traits: "Witte voorpoot, groene ogen, miauwt zacht",
+    location: "Purmerend - Overwhere",
+    date: "Vermist sinds 10 april 2026",
+    description:
+      "Luna is gewend buiten te lopen en keert normaal dezelfde avond terug. Mogelijk geschrokken van werkzaamheden in de buurt.",
+    photos: [
+      "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=1200&q=80",
+      "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=1200&q=80",
+    ],
+  },
+  {
+    name: "Max",
+    type: "Hond",
+    color: "Lichtbruin",
+    size: "Klein",
+    traits: "Blauwe halsband, kort staartje",
+    location: "Edam - Singelwijk",
+    date: "Vermist sinds 7 april 2026",
+    description:
+      "Max is een jonge teckel die snel contact zoekt met mensen. Laatst gezien bij de dijk richting Volendam.",
+    photos: [
+      "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1200&q=80",
+      "https://images.unsplash.com/photo-1593134257782-e89567b7718a?w=1200&q=80",
+    ],
+  },
+  {
+    name: "Rio",
+    type: "Vogel",
+    color: "Groen/geel",
+    size: "Klein",
+    traits: "Blauw vlekje bij oog, pootring links",
+    location: "Waterland - Broek in Waterland",
+    date: "Vermist sinds 4 april 2026",
+    description:
+      "Rio is een tamme parkiet en reageert vaak op fluitgeluiden. Kan op balkons of in bomen in woonwijken neerstrijken.",
+    photos: [
+      "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200&q=80",
+      "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=1200&q=80",
+    ],
+  },
 ];
 
 export default function VermistPage() {
   return (
-    <section className="bg-slate-50 py-16 sm:py-20">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <h1 className="font-display text-4xl font-bold text-slate-900">Vermiste dieren</h1>
-        <p className="mt-3 max-w-2xl text-lg text-slate-600">
-          Zie je een van onderstaande dieren? Neem direct contact met ons op.
-        </p>
-        <div className="mt-8 grid gap-3">
-          {missingAnimals.map((item) => (
-            <article key={item} className="rounded-xl border border-slate-200 bg-white p-4 shadow-soft">
-              {item}
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className="bg-slate-50">
+      <AnimalListings
+        title="Vermiste dieren"
+        intro="Zie je een van onderstaande dieren? Neem direct contact met ons op zodat we snel kunnen helpen bij hereniging."
+        items={missingAnimals}
+        locationLabel="Laatst gezien"
+      />
+    </div>
   );
 }
