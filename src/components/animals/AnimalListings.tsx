@@ -56,28 +56,31 @@ export function AnimalListings({ title, intro, items, locationLabel }: Props) {
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           {visibleItems.map((animal, idx) => (
+            // Variatie: wit blok met groene rand, groen blok met witte rand, groen blok met groene rand.
             <article
               key={animal.name}
               className={`overflow-hidden rounded-3xl border shadow-card ${
-                idx % 3 === 1 ? "border-2 border-brand-500 bg-white" : "border-2 border-rescue-500 bg-brand-100"
+                idx % 3 === 1
+                  ? "border-2 border-brand-500 bg-white shadow-[0_0_0_1px_rgba(59,135,87,0.08),0_12px_30px_-18px_rgba(59,135,87,0.55)]"
+                  : idx % 3 === 0
+                    ? "border-2 border-white bg-brand-100 shadow-[0_0_0_1px_rgba(59,135,87,0.16),0_14px_32px_-18px_rgba(59,135,87,0.6)]"
+                    : "border-2 border-brand-500 bg-brand-100 shadow-[0_0_0_1px_rgba(59,135,87,0.18),0_14px_32px_-18px_rgba(59,135,87,0.62)]"
               }`}
             >
-              <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
-                <div className="p-4 sm:p-5">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                    <Image
-                      src={animal.photos[0]}
-                      alt={`${animal.name} foto`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 30vw"
-                    />
-                  </div>
+              <div className="p-4 sm:p-5">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
+                  <Image
+                    src={animal.photos[0]}
+                    alt={`${animal.name} foto`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                  />
                 </div>
-                <div className="border-t border-slate-200 p-6 lg:border-l lg:border-t-0 sm:p-8">
+                <div className="mt-4">
                   <h2 className="font-display text-2xl font-bold text-slate-900">{animal.name}</h2>
                   <p className="mt-2 text-slate-700">{animal.description}</p>
-                  <dl className={`mt-6 grid gap-3 rounded-2xl p-4 text-sm sm:grid-cols-2 ${idx % 3 === 1 ? "bg-slate-50" : "bg-white/90"}`}>
+                  <dl className={`mt-4 grid gap-3 rounded-2xl p-4 text-sm sm:grid-cols-2 ${idx % 3 === 1 ? "bg-slate-50" : "bg-white/90"}`}>
                     <div>
                       <dt className="font-semibold text-slate-500">Type</dt>
                       <dd className="text-slate-800">{animal.type}</dd>
@@ -110,7 +113,7 @@ export function AnimalListings({ title, intro, items, locationLabel }: Props) {
         </div>
 
         {!showAll && items.length > 4 && (
-          <div ref={revealRef} className="mt-10 rounded-2xl border-2 border-rescue-500 bg-brand-100 px-5 py-4 text-center text-sm text-brand-900">
+          <div ref={revealRef} className="mt-10 rounded-2xl border-2 border-brand-500 bg-brand-100 px-5 py-4 text-center text-sm text-brand-900 shadow-[0_0_0_1px_rgba(59,135,87,0.14),0_10px_26px_-16px_rgba(59,135,87,0.55)]">
             Scroll verder naar beneden om meer meldingen te laden.
           </div>
         )}

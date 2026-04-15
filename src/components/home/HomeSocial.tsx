@@ -18,7 +18,11 @@ export function HomeSocial() {
             <li
               key={post.label}
               className={`rounded-xl border p-4 ${
-                idx % 3 === 1 ? "border-2 border-brand-500 bg-white" : "border-2 border-rescue-500 bg-brand-100"
+                idx % 3 === 1
+                  ? "border-2 border-brand-500 bg-white shadow-[0_0_0_1px_rgba(59,135,87,0.08),0_12px_30px_-18px_rgba(59,135,87,0.55)]"
+                  : idx % 3 === 0
+                    ? "border-2 border-white bg-brand-100 shadow-[0_0_0_1px_rgba(59,135,87,0.16),0_14px_32px_-18px_rgba(59,135,87,0.6)]"
+                    : "border-2 border-brand-500 bg-brand-100 shadow-[0_0_0_1px_rgba(59,135,87,0.18),0_14px_32px_-18px_rgba(59,135,87,0.62)]"
               }`}
             >
               <Link href={post.href} className="font-medium text-slate-800 hover:text-brand-700 hover:underline">
