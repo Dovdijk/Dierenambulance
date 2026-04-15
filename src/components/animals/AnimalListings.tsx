@@ -55,17 +55,18 @@ export function AnimalListings({ title, intro, items, locationLabel }: Props) {
         </div>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
-          {visibleItems.map((animal, idx) => (
-            // Variatie: wit blok met groene rand, groen blok met witte rand, groen blok met groene rand.
+          {visibleItems.map((animal, idx) => {
+            const greenSurface = idx % 2 === 1;
+            return (
             <article
               key={animal.name}
-              className={`overflow-hidden rounded-3xl border shadow-card ${
-                idx % 3 === 1
-                  ? "border-2 border-brand-500 bg-white shadow-[0_0_0_1px_rgba(59,135,87,0.08),0_12px_30px_-18px_rgba(59,135,87,0.55)]"
-                  : idx % 3 === 0
-                    ? "border-2 border-white bg-brand-100 shadow-[0_0_0_1px_rgba(59,135,87,0.16),0_14px_32px_-18px_rgba(59,135,87,0.6)]"
-                    : "border-2 border-brand-500 bg-brand-100 shadow-[0_0_0_1px_rgba(59,135,87,0.18),0_14px_32px_-18px_rgba(59,135,87,0.62)]"
-              }`}
+              className={[
+                "relative overflow-hidden rounded-3xl border-2 transition-[transform,box-shadow] duration-300 ease-out will-change-transform",
+                "motion-safe:hover:scale-[1.02] motion-safe:hover:z-10 motion-reduce:hover:scale-100",
+                greenSurface
+                  ? "border-white bg-brand-100 shadow-animal-green motion-safe:hover:shadow-animal-green"
+                  : "border-brand-600 bg-white shadow-animal-white motion-safe:hover:shadow-[0_6px_28px_-4px_rgb(15_23_42/0.1),0_18px_48px_-18px_rgb(15_23_42/0.1),0_0_44px_-8px_rgb(59_135_87/0.28)]",
+              ].join(" ")}
             >
               <div className="p-4 sm:p-5">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
@@ -80,7 +81,7 @@ export function AnimalListings({ title, intro, items, locationLabel }: Props) {
                 <div className="mt-4">
                   <h2 className="font-display text-2xl font-bold text-slate-900">{animal.name}</h2>
                   <p className="mt-2 text-slate-700">{animal.description}</p>
-                  <dl className={`mt-4 grid gap-3 rounded-2xl p-4 text-sm sm:grid-cols-2 ${idx % 3 === 1 ? "bg-slate-50" : "bg-white/90"}`}>
+                  <dl className={`mt-4 grid gap-3 rounded-2xl p-4 text-sm sm:grid-cols-2 ${greenSurface ? "bg-white/90" : "bg-slate-50"}`}>
                     <div>
                       <dt className="font-semibold text-slate-500">Type</dt>
                       <dd className="text-slate-800">{animal.type}</dd>
@@ -109,11 +110,12 @@ export function AnimalListings({ title, intro, items, locationLabel }: Props) {
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
 
         {!showAll && items.length > 4 && (
-          <div ref={revealRef} className="mt-10 rounded-2xl border-2 border-brand-500 bg-brand-100 px-5 py-4 text-center text-sm text-brand-900 shadow-[0_0_0_1px_rgba(59,135,87,0.14),0_10px_26px_-16px_rgba(59,135,87,0.55)]">
+          <div ref={revealRef} className="mt-10 rounded-3xl border-2 border-white bg-brand-100 px-5 py-4 text-center text-sm text-brand-900 shadow-animal-green">
             Scroll verder naar beneden om meer meldingen te laden.
           </div>
         )}

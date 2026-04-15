@@ -1,3 +1,4 @@
+import { ContactForm } from "@/components/contact/ContactForm";
 import { siteConfig } from "@/data/site";
 import { Section } from "./Section";
 
@@ -19,7 +20,7 @@ export function Contact() {
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <div className="space-y-6 rounded-2xl border border-slate-100 bg-slate-50/80 p-8 shadow-soft">
+          <div className="space-y-6 rounded-3xl border-2 border-brand-600 bg-white p-8 shadow-animal-white">
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
                 Telefoon
@@ -53,7 +54,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-brand-100 bg-brand-50/50 p-8 shadow-soft">
+          <div className="rounded-3xl border-2 border-white bg-brand-100 p-8 shadow-animal-green">
             <h3 className="font-display text-xl font-bold text-slate-900">Openingstijden</h3>
             <ul className="mt-6 space-y-4">
               {siteConfig.openingHours.map((row) => (
@@ -67,6 +68,10 @@ export function Contact() {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="mx-auto mt-14 max-w-3xl">
+          <ContactForm />
         </div>
       </div>
     </Section>

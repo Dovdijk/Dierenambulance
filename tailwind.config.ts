@@ -48,6 +48,12 @@ const config: Config = {
       boxShadow: {
         soft: "0 10px 30px -14px rgb(15 23 42 / 0.24)",
         card: "0 1px 2px rgb(15 23 42 / 0.06), 0 14px 32px -22px rgb(15 23 42 / 0.28)",
+        /** Gevonden/Vermist: white surface + green border (glow reads as border halo) */
+        "animal-white":
+          "0 4px 22px -4px rgb(15 23 42 / 0.09), 0 14px 40px -18px rgb(15 23 42 / 0.08), 0 0 36px -10px rgb(59 135 87 / 0.22)",
+        /** Green surface + calm elevation */
+        "animal-green":
+          "0 4px 22px -4px rgb(15 23 42 / 0.08), 0 16px 44px -20px rgb(0 0 0 / 0.07)",
       },
     },
   },
