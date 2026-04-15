@@ -19,7 +19,7 @@ export function HomeAboutCards() {
             <li
               key={card.title}
               className={`flex flex-col overflow-hidden rounded-2xl border shadow-soft ${
-                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50/70"
+                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-300 bg-brand-100"
               }`}
             >
               <div className="relative aspect-[16/10]">

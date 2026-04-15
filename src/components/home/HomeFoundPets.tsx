@@ -16,7 +16,7 @@ export function HomeFoundPets() {
             <li
               key={pet.name}
               className={`overflow-hidden rounded-3xl border shadow-card ${
-                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50"
+                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-300 bg-brand-100"
               }`}
             >
               <div className="relative aspect-[16/11]">

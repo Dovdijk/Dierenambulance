@@ -18,7 +18,7 @@ export function HomeSocial() {
             <li
               key={post.label}
               className={`rounded-xl border p-4 ${
-                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-200 bg-brand-50"
+                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-300 bg-brand-100"
               }`}
             >
               <Link href={post.href} className="font-medium text-slate-800 hover:text-brand-700 hover:underline">

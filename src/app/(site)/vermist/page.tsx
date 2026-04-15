@@ -52,6 +52,51 @@ const missingAnimals = [
       "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=1200&q=80",
     ],
   },
+  {
+    name: "Puck",
+    type: "Konijn",
+    color: "Bruin met witte neus",
+    size: "Klein",
+    traits: "Hangoor rechts, nieuwsgierig gedrag",
+    location: "Landsmeer - Dorpsstraat",
+    date: "Vermist sinds 2 april 2026",
+    description:
+      "Puck glipte uit de ren tijdens tuinwerkzaamheden en is sindsdien niet meer gezien.",
+    photos: [
+      "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=1200&q=80",
+      "https://images.unsplash.com/photo-1591382386627-349b692688ff?w=1200&q=80",
+    ],
+  },
+  {
+    name: "Mango",
+    type: "Kat",
+    color: "Rood/oranje",
+    size: "Middelgroot",
+    traits: "Wit kinvlekje, draagt zwarte band",
+    location: "Beemster - Rijperweg",
+    date: "Vermist sinds 31 maart 2026",
+    description:
+      "Mango komt normaal meerdere keren per dag thuis. Vermoedelijk geschrokken door verkeer.",
+    photos: [
+      "https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=1200&q=80",
+      "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=1200&q=80",
+    ],
+  },
+  {
+    name: "Sky",
+    type: "Vogel",
+    color: "Blauw",
+    size: "Klein",
+    traits: "Witte koptekening, reageert op fluiten",
+    location: "Volendam - Oude Kom",
+    date: "Vermist sinds 29 maart 2026",
+    description:
+      "Sky vloog weg toen de deur openstond. Kan op daken of balkonranden gaan zitten.",
+    photos: [
+      "https://images.unsplash.com/photo-1591198936750-16d8e15edb9e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1444464666168-49d633b86797?w=1200&q=80",
+    ],
+  },
 ];
 
 export default function VermistPage() {

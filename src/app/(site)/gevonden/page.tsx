@@ -52,6 +52,51 @@ const foundAnimals = [
       "https://images.unsplash.com/photo-1583301286816-f4f05e1e8b25?w=1200&q=80",
     ],
   },
+  {
+    name: "Bobby",
+    type: "Cavia",
+    color: "Lichtbruin/wit",
+    size: "Klein",
+    traits: "Donker vlekje rond linkeroog, erg rustig",
+    location: "Edam - Nieuwehaven",
+    date: "6 april 2026",
+    description:
+      "Cavia zat in een open doos bij een parkeerplaats. Lijkt tam en gewend aan oppakken.",
+    photos: [
+      "https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1589883661923-6476cb0ae9f2?w=1200&q=80",
+    ],
+  },
+  {
+    name: "Pico",
+    type: "Vogel",
+    color: "Groen met geel",
+    size: "Klein",
+    traits: "Ring om rechterpoot, tam gedrag",
+    location: "Monnickendam - Schoolplein",
+    date: "5 april 2026",
+    description:
+      "Kleine parkiet gevonden bij een school. Zocht direct beschutting en reageerde op stem.",
+    photos: [
+      "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=1200&q=80",
+      "https://images.unsplash.com/photo-1470114716159-e389f8712fda?w=1200&q=80",
+    ],
+  },
+  {
+    name: "Rocco",
+    type: "Hond",
+    color: "Wit met zwarte vlekken",
+    size: "Middelgroot",
+    traits: "Leuke stippen op snuit, blauwe bandana",
+    location: "Purmer-Zuid",
+    date: "2 april 2026",
+    description:
+      "Aangetroffen in een speeltuin. Hond was goed aanspreekbaar en leek recent losgeraakt.",
+    photos: [
+      "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=1200&q=80",
+      "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1200&q=80",
+    ],
+  },
 ];
 
 export default function GevondenPage() {
