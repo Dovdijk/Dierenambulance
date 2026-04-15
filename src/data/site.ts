@@ -6,6 +6,11 @@ export const siteConfig = {
   emergencyLabel: "Dier in nood? Bel direct",
   email: "contact@dierenambulancewaterland.nl",
   logo: "/images/logo-waterland.png",
+  /**
+   * Optional local hero video, e.g. "/media/hero.mp4".
+   * Keep undefined to use heroImage fallback.
+   */
+  heroVideo: "/media/hero.mp4" as string | undefined,
   heroImage:
     "https://dierenambulancewaterland.nl/wp-content/uploads/2025/10/Ria-foto-ooievaar-ziekenhuis-scaled.jpg",
   address: {
