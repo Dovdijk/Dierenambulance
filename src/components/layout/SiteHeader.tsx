@@ -19,7 +19,7 @@ export function SiteHeader() {
     { href: "/contact", label: "Contact" },
     { href: "/diensten", label: "Diensten" },
   ] as const;
-  const primaryHrefSet = new Set(primaryLinks.map((item) => item.href));
+  const primaryHrefSet = new Set<string>(primaryLinks.map((item) => item.href));
   const overigLinks = siteConfig.nav.filter((item) => !primaryHrefSet.has(item.href));
 
   const isActive = (href: string) =>
