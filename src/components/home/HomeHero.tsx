@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 
 export function HomeHero() {
   const hasVideo = Boolean(siteConfig.heroVideo);
+  const heroVideoType = siteConfig.heroVideo?.endsWith(".mov") ? "video/quicktime" : "video/mp4";
 
   return (
     <section className="relative isolate min-h-[68vh] overflow-hidden sm:min-h-[76vh]">
@@ -17,7 +18,7 @@ export function HomeHero() {
           className="absolute inset-0 h-full w-full object-cover"
           aria-hidden
         >
-          <source src={siteConfig.heroVideo} type="video/mp4" />
+          <source src={siteConfig.heroVideo} type={heroVideoType} />
         </video>
       ) : (
         <Image
