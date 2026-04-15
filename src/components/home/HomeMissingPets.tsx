@@ -13,7 +13,7 @@ export function HomeMissingPets() {
         </div>
         <ul className="mt-10 space-y-6">
           {siteConfig.missingPets.map((pet) => (
-            <li key={pet.name} className="grid gap-5 rounded-3xl border border-slate-200 bg-white p-5 shadow-card md:grid-cols-[260px_1fr]">
+            <li key={pet.name} className="grid gap-5 rounded-3xl border-2 border-brand-500 bg-white p-5 shadow-card md:grid-cols-[260px_1fr]">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image src={pet.image} alt={pet.name} fill className="object-cover" sizes="260px" />
               </div>

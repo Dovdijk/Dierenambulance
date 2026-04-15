@@ -2,7 +2,7 @@ export function HomeNewsletter() {
   return (
     <section className="bg-slate-100 py-16 sm:py-20">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-card sm:p-10">
+        <div className="rounded-3xl border-2 border-brand-500 bg-white p-8 shadow-card sm:p-10">
           <h2 className="font-display text-3xl font-bold text-slate-900 sm:text-4xl">
             Blijf op de hoogte
           </h2>

@@ -140,7 +140,7 @@ export function Services() {
             <section
               key={group.id}
               className={`overflow-hidden rounded-3xl border shadow-card ${
-                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-300 bg-brand-100"
+                idx % 3 === 1 ? "border-2 border-brand-500 bg-white" : "border-2 border-rescue-500 bg-brand-100"
               }`}
             >
               <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
@@ -187,7 +187,7 @@ export function Services() {
               <article
                 key={item.title}
                 className={`rounded-2xl border p-6 shadow-soft ${
-                  idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-300 bg-brand-100"
+                  idx % 3 === 1 ? "border-2 border-brand-500 bg-white" : "border-2 border-rescue-500 bg-brand-100"
                 }`}
               >
                 <p className="text-2xl" aria-hidden>

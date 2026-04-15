@@ -21,7 +21,7 @@ export default function NieuwsPage() {
             <article
               key={item.title}
               className={`overflow-hidden rounded-3xl border shadow-card ${
-                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-300 bg-brand-100"
+                idx % 3 === 1 ? "border-2 border-brand-500 bg-white" : "border-2 border-rescue-500 bg-brand-100"
               }`}
             >
               <div className="relative aspect-[16/10]">

@@ -54,27 +54,25 @@ export function AnimalListings({ title, intro, items, locationLabel }: Props) {
           <p className="mt-3 text-lg text-slate-600">{intro}</p>
         </div>
 
-        <div className="mt-10 space-y-10">
+        <div className="mt-10 grid gap-8 lg:grid-cols-2">
           {visibleItems.map((animal, idx) => (
             <article
               key={animal.name}
               className={`overflow-hidden rounded-3xl border shadow-card ${
-                idx % 3 === 1 ? "border-slate-200 bg-white" : "border-brand-300 bg-brand-100"
+                idx % 3 === 1 ? "border-2 border-brand-500 bg-white" : "border-2 border-rescue-500 bg-brand-100"
               }`}
             >
               <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
-                <div className="grid gap-3 p-4 sm:grid-cols-2 sm:p-5">
-                  {animal.photos.map((photo, index) => (
-                    <div key={`${animal.name}-${index}`} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                      <Image
-                        src={photo}
-                        alt={`${animal.name} foto ${index + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 30vw"
-                      />
-                    </div>
-                  ))}
+                <div className="p-4 sm:p-5">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                    <Image
+                      src={animal.photos[0]}
+                      alt={`${animal.name} foto`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 30vw"
+                    />
+                  </div>
                 </div>
                 <div className="border-t border-slate-200 p-6 lg:border-l lg:border-t-0 sm:p-8">
                   <h2 className="font-display text-2xl font-bold text-slate-900">{animal.name}</h2>
@@ -112,7 +110,7 @@ export function AnimalListings({ title, intro, items, locationLabel }: Props) {
         </div>
 
         {!showAll && items.length > 4 && (
-          <div ref={revealRef} className="mt-10 rounded-2xl border border-brand-300 bg-brand-100 px-5 py-4 text-center text-sm text-brand-900">
+          <div ref={revealRef} className="mt-10 rounded-2xl border-2 border-rescue-500 bg-brand-100 px-5 py-4 text-center text-sm text-brand-900">
             Scroll verder naar beneden om meer meldingen te laden.
           </div>
         )}
